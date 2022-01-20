@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 import { createStage, checkCollision } from "../gameHelpers";
 import { usePlayer } from "../hooks/usePlayer";
@@ -95,36 +97,47 @@ const Tetris = () => {
       localStorage.setItem("record", score);
     }
   }, [score]);
+  useEffect(() => {
+    if (gameOver)
+      toast.error("Game Over!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+  }, [gameOver]);
   return (
-    <StyledTetrisWrapper
-      role="button"
-      tabIndex="0"
-      onKeyDown={(e) => move(e)}
-      onKeyUp={keyUp}
-    >
-      <StyledTetris>
-        <Platform width={stage[0].length} height={stage.length}>
-          {stage.map((el) =>
-            el.map((cell, i) => <Cell key={i} color={Figures[cell[0]].color} />)
-          )}
-        </Platform>
-        <aside>
-          {gameOver ? (
-            <Display gameOver={gameOver}>"Game Over"</Display>
-          ) : (
-            <div>
-              <Display>{`Highest Score: ${localStorage.getItem(
-                "record"
-              )}`}</Display>
-              <Display>{`Score: ${score}`}</Display>
-              <Display>{`Rows: ${rows}`}</Display>
-              <Display>{`Level: ${level}`}</Display>
-            </div>
-          )}
-          <StartButton onClick={startGame}>Start game</StartButton>
-        </aside>
-      </StyledTetris>
-    </StyledTetrisWrapper>
+    <>
+      <ToastContainer />
+      <StyledTetrisWrapper
+        role="button"
+        tabIndex="0"
+        onKeyDown={(e) => move(e)}
+        onKeyUp={keyUp}
+      >
+        <StyledTetris>
+          <Platform width={stage[0].length} height={stage.length}>
+            {stage.map((el) =>
+              el.map((cell, i) => (
+                <Cell key={i} color={Figures[cell[0]].color} />
+              ))
+            )}
+          </Platform>
+          <aside>
+            {gameOver ? (
+              <Display gameOver={gameOver}>"Game Over"</Display>
+            ) : (
+              <div>
+                <Display>{`Highest Score: ${localStorage.getItem(
+                  "record"
+                )}`}</Display>
+                <Display>{`Score: ${score}`}</Display>
+                <Display>{`Rows: ${rows}`}</Display>
+                <Display>{`Level: ${level}`}</Display>
+              </div>
+            )}
+            <StartButton onClick={startGame}>Start game</StartButton>
+          </aside>
+        </StyledTetris>
+      </StyledTetrisWrapper>
+    </>
   );
 };
 

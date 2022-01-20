@@ -6,6 +6,7 @@ import LoginForm from "./components/navigation/loginForm";
 import RegisterForm from "./components/navigation/registerForm";
 import Home from "./components/navigation/home";
 import Tetris from "./components/Tetris/components/Tetris";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
