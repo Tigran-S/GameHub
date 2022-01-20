@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { createStage, checkCollision } from "../gameHelpers";
 import { usePlayer } from "../hooks/usePlayer";
@@ -86,6 +86,15 @@ const Tetris = () => {
   useInterval(() => {
     drop();
   }, dropTime);
+  useEffect(() => {
+    if (!Number(localStorage.getItem("record"))) {
+      localStorage.setItem("record", score);
+    }
+    if (Number(localStorage.getItem("record")) <= score) {
+      console.log(localStorage.getItem("record"));
+      localStorage.setItem("record", score);
+    }
+  }, [score]);
   return (
     <StyledTetrisWrapper
       role="button"
@@ -104,6 +113,9 @@ const Tetris = () => {
             <Display gameOver={gameOver}>"Game Over"</Display>
           ) : (
             <div>
+              <Display>{`Highest Score: ${localStorage.getItem(
+                "record"
+              )}`}</Display>
               <Display>{`Score: ${score}`}</Display>
               <Display>{`Rows: ${rows}`}</Display>
               <Display>{`Level: ${level}`}</Display>
