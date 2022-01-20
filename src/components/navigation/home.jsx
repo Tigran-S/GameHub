@@ -1,7 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    <Link to='/MemoryGame'>MemoryGame</Link>
+  </div>;
 };
 
 export default Home;
