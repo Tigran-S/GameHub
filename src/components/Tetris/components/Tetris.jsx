@@ -101,7 +101,7 @@ const Tetris = () => {
         </Platform>
         <aside>
           {gameOver ? (
-            <Display gameover={gameOver}>"Game Over"</Display>
+            <Display gameOver={gameOver}>"Game Over"</Display>
           ) : (
             <div>
               <Display>{`Score: ${score}`}</Display>
