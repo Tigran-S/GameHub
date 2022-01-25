@@ -63,7 +63,7 @@ function HangMan() {
   }
 
   return (
-    <>
+    <div className="hangManBody">
       <Header />
       <div className="game-container">
         <Figure wrongLetters={wrongLetters} />
@@ -81,7 +81,7 @@ function HangMan() {
         finalMessage={finalMessage}
       />
       <Notification showNotification={showNotification} />
-    </>
+    </div>
   );
 }
 
