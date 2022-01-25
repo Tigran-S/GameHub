@@ -1,0 +1,103 @@
+[1mdiff --git a/src/components/QuizGameForFamily/QuizGame/QuizGame.css b/src/components/QuizGameForFamily/QuizGame/QuizGame.css[m
+[1mindex 42fd510..433c4de 100644[m
+[1m--- a/src/components/QuizGameForFamily/QuizGame/QuizGame.css[m
+[1m+++ b/src/components/QuizGameForFamily/QuizGame/QuizGame.css[m
+[36m@@ -8,16 +8,6 @@[m [mbody{[m
+     font-size: 10px;[m
+ }[m
+ [m
+[31m-.App{[m
+[31m-    display: flex;[m
+[31m-    justify-content: center;[m
+[31m-    text-align: center;[m
+[31m-[m
+[31m-}[m
+[31m-/* .main{[m
+[31m-    position: relative;[m
+[31m-    top:100px;[m
+[31m-} */[m
+ .background{[m
+     background-image:url("../pic777.jpg");[m
+     background-position:top center;[m
+[36m@@ -116,45 +106,6 @@[m [mbody{[m
+     color: cornsilk;[m
+     background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );[m
+ }[m
+[31m-/* .score-board{[m
+[31m-   [m
+[31m-    display: flex;[m
+[31m-    justify-content:space-between;[m
+[31m-    align-items: center;[m
+[31m-    flex-direction: column;[m
+[31m-    text-align: center;[m
+[31m-    width: 100%;[m
+[31m-    height: 60vh;[m
+[31m-} */[m
+[31m-/* .score{[m
+[31m-    font-size: 3rem;[m
+[31m-    margin-top:20%;[m
+[31m-    width: 100%;[m
+[31m-    height: 10vh;[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    align-items: center;[m
+[31m-    border:  solid 2px rgb(196, 192, 192);[m
+[31m-    border-radius:15px;[m
+[31m-    background-color:rgb(1 65 94);[m
+[31m-    color:#fdbd1d;[m
+[31m-    font-weight:bolder;[m
+[31m-}  */[m
+[31m-/* .playAgainBtn{[m
+[31m-    width: 30%;[m
+[31m-    height: 8vh;[m
+[31m-    background-color: #ffbd1e;[m
+[31m-    color:#043758;[m
+[31m-    text-shadow: 2px 2px lightblue;[m
+[31m-    font-size: 2rem;[m
+[31m-    font-weight:bolder;[m
+[31m-    border: solid 1px rgb(70, 41, 3);[m
+[31m-    border-radius: 5px;[m
+[31m-}[m
+[31m-.playAgainBtn:hover{[m
+[31m-    color: cornsilk;[m
+[31m-    background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );[m
+[31m-} */[m
+ [m
+ @media screen and (max-width:1200px){[m
+    [m
+[36m@@ -191,16 +142,6 @@[m [mbody{[m
+         padding-bottom: 70%;[m
+     }[m
+     [m
+[31m-    /* .score{[m
+[31m-        font-size: 2rem;[m
+[31m-        margin-top:25%;[m
+[31m-        width: 100%;[m
+[31m-        height: 10vh;[m
+[31m-        [m
+[31m-    } [m
+[31m-    .playAgainBtn{[m
+[31m-         font-size: 1.5rem;[m
+[31m-        } */[m
+ }[m
+ [m
+ @media screen and (max-width:600px){[m
+[36m@@ -224,18 +165,4 @@[m [mbody{[m
+          font-size: 0.7rem;[m
+          [m
+      }[m
+[31m-    [m
+[31m-     [m
+[31m-     /* .score{[m
+[31m-         font-size: 1rem;[m
+[31m-         margin-top:75%;[m
+[31m-         width: 100%;[m
+[31m-         height: 10vh;[m
+[31m-         [m
+[31m-     } [m
+[31m-     .playAgainBtn{[m
+[31m-          font-size: 1.5rem;[m
+[31m-          width: 60%;[m
+[31m-          height: 8vh;[m
+[31m-         } */[m
+  }[m
