@@ -58,7 +58,7 @@ function HangMan() {
   }
 
   return (
-    <>
+    <div className='hangManBody'>
       <Header />
       <div className="game-container">
         <Figure wrongLetters={wrongLetters} />
@@ -67,7 +67,7 @@ function HangMan() {
       </div>
       <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
-    </>
+    </div>
   );
 }
 
