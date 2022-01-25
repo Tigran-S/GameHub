@@ -7,8 +7,9 @@ import RegisterForm from "./components/navigation/registerForm";
 import Home from "./components/navigation/home";
 import Tetris from "./components/Tetris/components/Tetris";
 import "react-toastify/dist/ReactToastify.css";
+import QuizGame from "./components/QuizGameForFamily/QuizGame/QuizGame";
 
-import HangMan from './components/HangMan/components/HangMan'
+import HangMan from "./components/HangMan/components/HangMan";
 const App = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tetris" element={<Tetris />} />
+        <Route path="/QuizGameForFamily" element={<QuizGame />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
