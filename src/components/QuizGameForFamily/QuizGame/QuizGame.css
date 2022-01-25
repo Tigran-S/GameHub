@@ -52,7 +52,7 @@
     font-weight:bolder;
 }
 
-.title{
+.title,.playAgain{
     animation-name:title;
     background-repeat:no-repeat ;
     background-position: relative;
@@ -65,6 +65,9 @@
 
 @keyframes title {
     100%{transform:scale(1.2)}
+}
+@keyframes playAgain {
+    100%{transform:scale(1)}
 } 
 .question{
     margin-top:1%;
@@ -94,7 +97,33 @@
     border: solid 1px rgb(70, 41, 3);
     border-radius: 5px;
 }
-.answerBtn:hover{
+.correct{
+    background-color: rgb(70, 129, 10);
+    color: whitesmoke;
+}
+.incorrect{
+    background-color: rgb(110, 9, 9);
+    color: whitesmoke;
+}
+
+/* .answerBtn:hover{
+    color: cornsilk;
+    background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );
+} */
+
+.playAgain{
+    /* margin-left: 105%; */
+    width: 20%;
+    height: auto;
+    color: cornsilk;
+    background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );
+    text-shadow: 2px 2px lightblue;
+    font-size: 1.5rem;
+    font-weight:bolder;
+    border: solid 1px rgb(70, 41, 3);
+    border-radius: 15px;
+}
+.playAgain:hover,.showAnswers:hover{
     color: cornsilk;
     background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );
 }
