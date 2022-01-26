@@ -89,12 +89,12 @@ const Tetris = () => {
     drop();
   }, dropTime);
   useEffect(() => {
-    if (!Number(localStorage.getItem("record"))) {
-      localStorage.setItem("record", score);
+    if (!Number(localStorage.getItem("highestScore"))) {
+      localStorage.setItem("highestScore", score);
     }
-    if (Number(localStorage.getItem("record")) <= score) {
-      console.log(localStorage.getItem("record"));
-      localStorage.setItem("record", score);
+    if (Number(localStorage.getItem("highestScore")) <= score) {
+      console.log(localStorage.getItem("highestScore"));
+      localStorage.setItem("highestScore", score);
     }
   }, [score]);
   useEffect(() => {
@@ -126,7 +126,7 @@ const Tetris = () => {
             ) : (
               <div>
                 <Display>{`Highest Score: ${localStorage.getItem(
-                  "record"
+                  "highestScore"
                 )}`}</Display>
                 <Display>{`Score: ${score}`}</Display>
                 <Display>{`Rows: ${rows}`}</Display>
