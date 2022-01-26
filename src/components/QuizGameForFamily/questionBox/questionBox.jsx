@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 
-const QuestionBox=({question,options,selected})=>{
+const QuestionBox=({question,options,selected,correct})=>{
     const[answer,setAnswer]=useState(options);
     const [isChosen,setIsChosen]= useState(false);
 

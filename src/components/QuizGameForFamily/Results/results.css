@@ -34,9 +34,21 @@
     border: solid 1px rgb(70, 41, 3);
     border-radius: 5px;
 }
-.playAgainBtn:hover{
+.playAgainBtn:hover,.showAnswers:hover{
     color: cornsilk;
     background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );
+}
+
+.showAnswers{
+    width: 30%;
+    height: 8vh;
+    background-color: #ffbd1e;
+    color:#043758;
+    text-shadow: 2px 2px lightblue;
+    font-size: 1.5rem;
+    font-weight:bolder;
+    border: solid 1px rgb(70, 41, 3);
+    border-radius: 5px;
 }
 
 @media screen and (max-width:1200px){
@@ -50,6 +62,9 @@
     .playAgainBtn{
          font-size: 1.5rem;
         }
+    .showAnswers{
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width:600px){
@@ -61,8 +76,13 @@
         
     } 
     .playAgainBtn{
-         font-size: 1.5rem;
+         font-size: 1rem;
          width: 60%;
          height: 8vh;
+        }
+        .showAnswers{
+            font-size: 1rem;
+            width: 60%;
+            height: 8vh;
         }
 }
