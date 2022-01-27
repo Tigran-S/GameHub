@@ -13,7 +13,7 @@ export const usePlayer = () => {
   const rotate = (matrix, dir) => {
     const rotatedTetro = matrix.map((_, i) => matrix.map((col) => col[i]));
     if (dir > 0) return rotatedTetro.map((row) => row.reverse());
-    return rotatedTetro.reverse();
+    console.log("asda");
   };
 
   const playerRoate = (stage, dir) => {
