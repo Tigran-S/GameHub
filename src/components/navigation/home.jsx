@@ -1,10 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return <div>
-    <Link to ='/QuizGameForFamily'> Quiz Game For Family</Link>
-    </div>;
+    <Link to='/XOApp'> XO</Link>
+  </div>;
 };
 
 export default Home;

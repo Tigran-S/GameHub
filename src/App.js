@@ -5,15 +5,14 @@ import About from "./components/navigation/about";
 import LoginForm from "./components/navigation/loginForm";
 import RegisterForm from "./components/navigation/registerForm";
 import Home from "./components/navigation/home";
-import QuizGame from "./components/QuizGameForFamily/QuizGame/QuizGame";
-
+import XOApp from "./components/XOcomponents/XOApp";
 const App = () => {
   return (
     <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/QuizGameForFamily" element={<QuizGame/>} />
+        <Route path="/XOApp" element={<XOApp />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
