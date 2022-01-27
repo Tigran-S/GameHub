@@ -1,13 +1,13 @@
 import React from'react'
-import './results.css'
+import classes from '../QuizGame/QuizGame.module.css'
 
 
 const Result = ({score,playAgain,showAnswers})=>{
     return(
-    <div className ='score-board'>
-        <div className='score'>You scored {score} / 5 correct answers</div>
-        <button className='playAgainBtn' onClick={playAgain}> Play Again!</button>
-        <button className='showAnswers' onClick={showAnswers}> Show your Answers!</button>
+    <div className ={classes.scoreBoard}>
+        <div className={classes.score}>You scored {score} / 5 correct answers</div>
+        <button className={classes.playAgainBtn} onClick={playAgain}> Play Again!</button>
+        <button className={classes.showAnswers} onClick={showAnswers}> Show your Answers!</button>
     </div>
     )
 

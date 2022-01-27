@@ -4,7 +4,7 @@ import QuestionBox from '../questionBox/questionBox';
 import Result from '../Results/results';
 import QuestionBoxResult from '../QuestionBoxResult/QuestionBoxResult';
 
-import './QuizGame.css'
+import classes from './QuizGame.module.css'
 
 function QuizGame(){
     const [question,setQuestion]= useState([]);
@@ -48,11 +48,11 @@ function QuizGame(){
 
     },[])
     return(
-        <section className='main'>
-        <div className='background'>
-        <div className='container'>
-            <div className='header'> <p className='title'>Quiz Game for Family</p></div>
-            <div className='bodyPart'>{question.length>0 &&
+        <section className={classes.main}>
+        <div className={classes.background}>
+        <div className={classes.container}>
+            <div className={classes.header}> <p className={classes.title}>Quiz Game for Family</p></div>
+            <div className={classes.bodyPart}>{question.length>0 &&
             responses<5 && 
             question.map(({question,answers,correct,questionId})=>{
             return <QuestionBox 
@@ -70,7 +70,7 @@ function QuizGame(){
             question={question}
             selected = {selectedAnswers[index]}
             />})}
-            {showAns && <button className='playAgain' onClick={playAgain}>Play Again</button>}
+            {showAns && <button className={classes.playAgain} onClick={playAgain}>Play Again</button>}
             
             
             

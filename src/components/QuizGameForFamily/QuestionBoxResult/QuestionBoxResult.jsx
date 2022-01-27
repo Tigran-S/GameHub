@@ -1,14 +1,20 @@
 import React from 'react';
+import classes from '../QuizGame/QuizGame.module.css'
 
 
 const QuestionBoxResult=({question,options,selected,correct})=>{
   console.log(correct);
   console.log(selected);
     return(
-        <div className = 'questionBox'>
-            <div className = 'question'>{question}</div>
+        <div className = {classes.questionBox}>
+            <div className = {classes.question}>{question}</div>
             {options.map((item,index)=>{
-                return <button key = {index} className={item ===correct?'answerBtn correct':item===selected?'answerBtn incorrect':'answerBtn' } >{item}</button>
+                return <button key = {index} 
+                className={
+                    item ===correct?
+                    classes['correct'] :
+                    item===selected?classes['incorrect']:
+                    classes['answerBtn'] } >{item}</button>
             })}
 
         </div>

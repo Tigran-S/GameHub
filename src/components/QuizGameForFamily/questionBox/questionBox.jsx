@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import classes from '../QuizGame/QuizGame.module.css'
 
 
 const QuestionBox=({question,options,selected,correct})=>{
@@ -7,10 +8,10 @@ const QuestionBox=({question,options,selected,correct})=>{
 
 
     return(
-        <div className = 'questionBox'>
-            <div className = 'question'>{question}</div>
+        <div className = {classes.questionBox}>
+            <div className = {classes.question}>{question}</div>
             {answer.map((item,index)=>{
-                return <button key = {index} className='answerBtn' onClick={()=>{
+                return <button key = {index} className={classes.answerBtn} onClick={()=>{
                     if (isChosen) {return}
                     setAnswer([item])
                     selected(item)
