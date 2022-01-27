@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Header from "./Header";
-import Figure from "./Figure";
-import WrongLetters from "./WrongLetters";
-import Word from "./Word";
-import Popup from "./Popup";
-import Notification from "./Notification";
-import { showNotification as show } from "../helpers/helpers";
+import Header from "../Header";
+import Figure from "../Figure";
+import WrongLetters from "../WrongLetters";
+import Word from "../Word";
+import Popup from "../Popup";
+import Notification from "../Notification";
+import { showNotification as show } from "../../helpers/helpers";
 
-import "../Styles.css";
+import "../../Styles.css";
 
 const words = ["աստղ", "ապագա", "հրաշք", "նապաստակ"];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
