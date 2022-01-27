@@ -3,8 +3,6 @@ import classes from '../QuizGame/QuizGame.module.css'
 
 
 const QuestionBoxResult=({question,options,selected,correct})=>{
-  console.log(correct);
-  console.log(selected);
     return(
         <div className = {classes.questionBox}>
             <div className = {classes.question}>{question}</div>
@@ -13,7 +11,7 @@ const QuestionBoxResult=({question,options,selected,correct})=>{
                 className={
                     item ===correct?
                     classes['correct'] :
-                    item===selected?classes['incorrect']:
+                    item===selected? classes['incorrect']:
                     classes['answerBtn'] } >{item}</button>
             })}
 

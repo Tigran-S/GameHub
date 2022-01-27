@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import classes from '../QuizGame/QuizGame.module.css'
 
 
-const QuestionBox=({question,options,selected,correct})=>{
+const QuestionBox=({question,options,selected})=>{
     const[answer,setAnswer]=useState(options);
     const [isChosen,setIsChosen]= useState(false);
 

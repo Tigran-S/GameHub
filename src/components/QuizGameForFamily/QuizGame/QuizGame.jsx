@@ -18,10 +18,8 @@ function QuizGame(){
         questionBank().then(data=>{
             setQuestion(data)
         })
-
     }
     
-
     const computeAnswer=(answer,correctAnswer)=>{
         setSelectedAnswers([...selectedAnswers,answer])
         console.log(selectedAnswers);
@@ -29,10 +27,8 @@ function QuizGame(){
             setScore(score+1)
         }
         setResponses(responses<5?responses+1:5)
-            
-        }
-        
-
+    }
+    
     const playAgain=()=>{
         getQuestions();
         setResponses(0);
@@ -41,12 +37,10 @@ function QuizGame(){
         setSelectedAnswers([]);
     }
     
-
-
     useEffect(()=>{
         getQuestions(question)
-
     },[])
+
     return(
         <section className={classes.main}>
         <div className={classes.background}>
@@ -72,9 +66,7 @@ function QuizGame(){
             />})}
             {showAns && <button className={classes.playAgain} onClick={playAgain}>Play Again</button>}
             
-            
-            
-            </div>
+             </div>
             {responses===5 && !showAns?<Result score = {score} showAnswers={()=>{setShowAns(true)}} playAgain={playAgain}></Result>:null}
         </div>
         </div>
