@@ -6,7 +6,6 @@ import LoginForm from "./components/navigation/loginForm";
 import RegisterForm from "./components/navigation/registerForm";
 import Home from "./components/navigation/home";
 
-import HangMan from './components/HangMan/components/HangMan'
 const App = () => {
   return (
     <div>
@@ -16,7 +15,6 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/hangman" element={<HangMan />} />
       </Routes>
     </div>
   );
