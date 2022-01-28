@@ -121,5 +121,5 @@ const questionBank = [
       }
 ]
 
-export default (n=5)=>
+export default(n=5)=>
 Promise.resolve(questionBank.sort(() => 0.5-Math.random()).slice(0,n))

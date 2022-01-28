@@ -4,7 +4,6 @@ export default function Board({isFlipped,index,flipCard,language}){
     return (
         <div
             className={`card ${isFlipped ? "flipped" : ""}`}
-            key={index}
             onClick={() => flipCard(index)}
         >
             <div className="inner">

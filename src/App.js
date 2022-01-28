@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import QuizGame from "./components/QuizGameForFamily/QuizGame/QuizGame";
 import Game from "./components/MemoryGame/Game";
 import HangMan from "./components/HangMan/components/HangMan";
+import XOApp from "./components/XOcomponents/XOApp";
 import PrivateRoute from "./components/PrivateRouter";
 // import { history } from "./_helpers";
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/QuizGameForFamily" element={<QuizGame />} />
           <Route path="/MemoryGame" element={<Game />} />
           <Route path="/hangman" element={<HangMan />} />
+          <Route path="/XO" element={<XOApp />} />
         </Route>
         <Route path='/login' element={<LoginForm/>}/>
         {/* <Route path="/" element={<Home />} /> */}

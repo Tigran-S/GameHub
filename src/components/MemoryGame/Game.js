@@ -106,6 +106,7 @@ export default function Game() {
                            index={index}
                            flipCard={flipCard}
                            language={language}
+                           key={index}
                        />
                     )
                 })
@@ -113,7 +114,7 @@ export default function Game() {
             </div>
             <button
                 onClick={reset}
-                className='btn'
+                id='btnNewGame'
                 >
                 NEW GAME</button>
         </div>

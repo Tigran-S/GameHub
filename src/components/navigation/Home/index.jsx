@@ -39,9 +39,9 @@ export default function Home() {
       <div className="w3-content w3-padding" style={{ maxWidth: "1564px" }}>
         {/* Project Section */}
         <div className="w3-container w3-padding-32" id="games">
-          <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16">
+          {/* <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16">
             Games
-          </h3>
+          </h3> */}
         </div>
 
         <div className="w3-row-padding">
@@ -90,11 +90,11 @@ export default function Home() {
             </Link>
           </div>
           <div className="w3-col l3 m6 w3-margin-bottom">
-            <Link to="/MemoryGame">
+            <Link to="/XO">
               <div className="w3-display-container">
                 <img
-                  src="./images/games/g1.jpeg"
-                  alt="Memory Game"
+                  src="./images/games/g5.jpeg"
+                  alt="XO Game"
                   style={{ width: "100%" }}
                 />
               </div>
@@ -174,7 +174,7 @@ export default function Home() {
               style={{ width: "100%" }}
             />
             <h3>Grigor Tamazyan</h3>
-            <p className="w3-opacity">Memory Game Creator</p>
+            <p className="w3-opacity">XO Game Creator</p>
             <p>
               <button className="w3-button w3-light-grey w3-block">
                 Contact
