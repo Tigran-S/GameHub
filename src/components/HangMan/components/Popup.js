@@ -29,10 +29,10 @@ const Popup = ({
 
   return (
     <div
-      className="popup-container"
+      className="popupHangman-container"
       style={finalMessage !== "" ? { display: "flex" } : {}}
     >
-      <div className="popup">
+      <div className="popupHangman">
         <h2>{finalMessage}</h2>
         <button onClick={playAgain}>Կրկին խաղալ</button>
       </div>

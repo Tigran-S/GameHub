@@ -10,22 +10,20 @@ export const usePlayer = () => {
     collided: false,
   });
 
-  const rotate = (matrix, dir) => {
-    const rotatedTetro = matrix.map((_, i) => matrix.map((col) => col[i]));
-    if (dir > 0) return rotatedTetro.map((row) => row.reverse());
-    return rotatedTetro.reverse();
+  const rotate = matrix => {
+    return matrix.map((_, i) => matrix.map((col) => col[i])).map((row) => row.reverse());
   };
 
-  const playerRoate = (stage, dir) => {
+  const playerRoate = stage => {
     const clonedPlayer = JSON.parse(JSON.stringify(player));
-    clonedPlayer.figure = rotate(clonedPlayer.figure, dir);
+    clonedPlayer.figure = rotate(clonedPlayer.figure);
     const pos = clonedPlayer.pos.x;
     let offset = 1;
     while (checkCollision(clonedPlayer, stage, { x: 0, y: 0 })) {
       clonedPlayer.pos.x += offset;
       offset = -(offset + (offset > 0 ? 1 : -1));
       if (offset > clonedPlayer.figure[0].length) {
-        rotate(clonedPlayer.figure, -dir);
+        rotate(clonedPlayer.figure);
         clonedPlayer.pos.x = pos;
         return;
       }
