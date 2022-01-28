@@ -49,11 +49,12 @@
     background-image: radial-gradient(rgb(6 20 27),rgb(80 9 9), red );
     background-color: #2b323fe0;
     color:#f8f7f6;
-    font-size: 3.5rem;
+    
     font-weight:bolder;
 }
 
 .title,.playAgain{
+    font-size: 3.5rem;
     animation-name:title;
     background-repeat:no-repeat ;
     background-position: relative;
